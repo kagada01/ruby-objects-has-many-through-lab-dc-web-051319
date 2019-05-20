@@ -1,0 +1,17 @@
+require 'pry'
+class Appointment
+  attr_reader :patient, :doctor, :date
+
+  @@all = []
+
+  def initialize(patient, date, doctor)
+#binding.pry
+    @date, @patient, @doctor = date, patient, doctor
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+
+end
